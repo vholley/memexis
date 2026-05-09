@@ -1,0 +1,20 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Obsidian (if used as a viewer)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# Lint output (regenerated on demand)
+dashboards/lint-*.md
+
+# Temporary
+*.tmp
+*~
