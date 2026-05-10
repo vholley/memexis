@@ -156,6 +156,32 @@ When working on a module:
 2. Once content stabilizes, the agent promotes the relevant parts into the canonical `README.md` and updates the source page's status.
 3. Study material is preserved, not deleted, unless the user explicitly asks for cleanup.
 
+### Study note shape
+
+Study notes default to reference depth. The reader is a senior practitioner who returns to the note later when applying the topic; survey-level coverage is the wrong target. Each study note follows this shape:
+
+1. **What it is**: concrete description of the topic.
+2. **Why it matters**: practical justification, with the failure modes the topic addresses.
+3. **Mechanics in depth**: features and patterns with what / when / why treatment per pattern.
+4. **Things to remember**: gotchas and common mistakes.
+5. **Where this fits**: cross-references to related notes.
+6. **Sources**: links to canonical documentation.
+
+When a topic spans both conceptual understanding and operational application, split into two notes along the what-is-it / how-to-apply-it line: e.g. `01-uv-overview.md` and `02-uv-in-practice.md`. When the seam is unclear, expand in place. Splitting where there is no seam fragments the topic; expanding where there is a seam buries the application material under conceptual material. Heuristic: if "mechanics in depth" is dominated by API-style usage, configuration, and recipes, split. If it is dominated by mental model, design rationale, and integrative concepts, single note.
+
+### Module README shape
+
+A module's `README.md` is a navigation page, not a content page. The shape:
+
+1. **Title and metadata**: module number, block, estimated hours.
+2. **Summary**: 1-2 paragraphs describing what the module covers and how it sits inside the course.
+3. **Connections**: 1 paragraph on how this module's material flows into later modules and projects.
+4. **Study material**: a table indexing the study notes. Columns: `#`, file, one-line topic. Notes flagged as deep get a `**Deep**` marker in the topic column.
+5. **Exercises**: numbered list of exercises with one-line descriptions, pointing to `exercises.md`.
+6. **Sources**: top-level sources for the module. Per-note source lists live inside each study note.
+
+The table form for study material reads as a one-glance map of the module. Bullet lists with the same content scan less well at module sizes of 5-10 notes.
+
 ### Index files
 
 Directories with multiple children carry a `README.md` that indexes the children. The agent regenerates these on every edit that adds, removes, or renames a child. Index files have `type: index` in frontmatter and a generated body.
@@ -219,7 +245,23 @@ Trigger: user names a topic and asks for a course on it.
 
 The course-readme's syllabus section lists modules with relative links and one-line descriptions. The agent regenerates this section when modules are added, renamed, or removed.
 
-### 6.2 Source ingestion
+### 6.2 Module authoring
+
+Trigger: a scaffolded module's `README.md` exists with the description and source list, but the `study/` directory is empty. The user wants to populate it.
+
+Two paths, picked per module based on the user's prior context with the topic:
+
+**Direct drafting** for review territory. The user has prior context on the topic; the module's purpose is to consolidate and reference, not to introduce. The agent drafts the study notes from the curriculum outline plus web-searched current state, presents them in batches, and iterates with the user.
+
+**Student-teacher conversation first** for new learning territory. The user does not have prior context; the module is genuinely new material. The agent runs a chat conversation explaining the topic interactively, with the user asking questions and steering depth. Once the conversation has covered the module's planned scope, the agent synthesizes study notes from the conversation. This produces depth-calibrated notes (the conversation surfaces what the user actually needs explained at length vs. what they already understand) and avoids the rewrite cycle that comes from drafting at the wrong depth.
+
+At module start, the agent asks which path the user prefers. A reasonable default by topic: direct for tooling and conventions modules, student-teacher for technical-domain modules where the user has not worked in the area before.
+
+**Depth calibration check**: regardless of path, before generating study material at scale, the agent drafts one note at the proposed depth, presents it to the user, and waits for sign-off on the depth target. Module-scale rewrites (an hour or more of content recalibrated after the user reviews the whole module) are avoided this way.
+
+Each study note follows the shape in Section 4.
+
+### 6.3 Source ingestion
 
 Trigger: user provides an external source (URL, paper, transcript) for a specific course or project.
 
@@ -233,7 +275,7 @@ Trigger: user provides an external source (URL, paper, transcript) for a specifi
 5. Refresh `related:` arrays on touched pages.
 6. Append a `## [date] ingest | <source-title>` entry to the course or project log, and a global log entry.
 
-### 6.3 Project proposal and scoping
+### 6.4 Project proposal and scoping
 
 Trigger: user asks for a project, or the agent proposes one as part of curriculum design.
 
@@ -248,7 +290,7 @@ Trigger: user asks for a project, or the agent proposes one as part of curriculu
 4. Set `lifecycle: planning` on the project README.
 5. Update global log and `dashboards/active-projects.md`.
 
-### 6.4 Project execution
+### 6.5 Project execution
 
 Trigger: user works on an active project. This workflow is most often run from Claude Code, not chat.
 
@@ -270,7 +312,7 @@ On each working session:
 5. When entering a new lifecycle phase, update `lifecycle:` in the project README.
 6. When the deliverable URL is known, update `deliverable_url:` in the project README.
 
-### 6.5 Promote and demote
+### 6.6 Promote and demote
 
 Promotion moves content from raw to canonical, or from project-bound to general.
 
@@ -282,7 +324,9 @@ Promotion moves content from raw to canonical, or from project-bound to general.
 
 Demotion is rare. If a polished page becomes outdated and a newer version supersedes it, the agent sets the old page's status to `superseded` with `superseded_by:` pointing at the replacement.
 
-### 6.6 Archive
+**Cleaning a deep note**: when an existing study note is already at reference depth but predates the current shape conventions (missing What/Why intro, missing Where-this-fits, contains inline version references), the agent runs a clean pass: add the What/Why intro and Where-this-fits outro to match the current shape, move any inline version references and changelog content into the sources list, and leave the substantive content in place. Cleaning is not rewriting; if the substance needs revising, that is a separate edit.
+
+### 6.7 Archive
 
 Trigger: user marks a project as shipped, abandoned, or stale.
 
@@ -295,7 +339,7 @@ Trigger: user marks a project as shipped, abandoned, or stale.
 
 Archived projects are not deleted. Cross-references continue to work via the new path. Resources and learnings derived from the project remain in their respective locations.
 
-### 6.7 Lint pass
+### 6.8 Lint pass
 
 Trigger: user requests a health check, or scheduled (weekly or monthly).
 
@@ -314,7 +358,7 @@ Checks:
 
 Output: a markdown report at `dashboards/lint-<YYYY-MM-DD>.md` with categorized findings and proposed actions. The user approves a subset and the agent executes.
 
-### 6.8 Dashboard regeneration
+### 6.9 Dashboard regeneration
 
 Dashboards are regenerated on demand. The agent reads relevant pages and writes the dashboard markdown. Standard dashboards:
 
@@ -349,6 +393,9 @@ Content the agent writes follows these rules:
 - **No padding**: state claims directly. No restating, no rhetorical setup, no padding sentences.
 - **Sentence case** in headings.
 - **Working-out and exercises** belong in `study/` or in module `exercises.md`, not in canonical pages.
+- **Reference depth, not survey depth**: study notes default to reference depth. The reader is a senior practitioner returning later when applying the topic.
+- **Version numbers and dates belong in sources**: body text says "modern Python supports X"; sources list says "PEP 695, Python 3.12+". Inline release dates and "as of April 2026" framings date the page in a way that requires future maintenance.
+- **License mentions are decision-relevant or omitted**: include licensing details when they affect a reader's choice (open-weight model selection, GDPR-sensitive deployments). Omit license mentions for common tools where the reader will not be making a license-driven decision.
 
 The user has strict prose preferences in their broader Claude usage. When writing long prose, avoid: em-dashes, negative parallelism ("not X, but Y"), self-posed rhetorical questions, copulas like "serves as" / "represents" used for weight, and filler vocabulary ("delve", "leverage" outside finance, "robust" outside statistics, "framework" as filler). State claims directly.
 
