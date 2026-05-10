@@ -54,6 +54,7 @@ templates/
 log.md                              # global event log
 README.md                           # human-facing overview
 CLAUDE.md                           # this file
+STYLE.md                            # prose style guide (referenced from §8)
 ```
 
 ### Naming conventions
@@ -385,19 +386,18 @@ The user can navigate by:
 
 ## 8. Style rules for content
 
-Content the agent writes follows these rules:
+Content the agent writes follows these structural rules:
 
 - **Prose first**: long-form articles, not lists, are the default. Lists are for genuinely list-shaped content (steps, exercises, structured comparisons).
 - **Code-heavy is expected**: technical articles include code snippets with sufficient context, especially the when, why, and how to apply patterns described.
 - **Citations**: every non-trivial claim cites a source. Use ``-style inline references where applicable, or footnote-style citations linking to the source page in `sources/`.
-- **No padding**: state claims directly. No restating, no rhetorical setup, no padding sentences.
 - **Sentence case** in headings.
 - **Working-out and exercises** belong in `study/` or in module `exercises.md`, not in canonical pages.
 - **Reference depth, not survey depth**: study notes default to reference depth. The reader is a senior practitioner returning later when applying the topic.
 - **Version numbers and dates belong in sources**: body text says "modern Python supports X"; sources list says "PEP 695, Python 3.12+". Inline release dates and "as of April 2026" framings date the page in a way that requires future maintenance.
 - **License mentions are decision-relevant or omitted**: include licensing details when they affect a reader's choice (open-weight model selection, GDPR-sensitive deployments). Omit license mentions for common tools where the reader will not be making a license-driven decision.
 
-The user has strict prose preferences in their broader Claude usage. When writing long prose, avoid: em-dashes, negative parallelism ("not X, but Y"), self-posed rhetorical questions, copulas like "serves as" / "represents" used for weight, and filler vocabulary ("delve", "leverage" outside finance, "robust" outside statistics, "framework" as filler). State claims directly.
+For prose style (the rules about sentence-level phrasing, vocabulary, rhetorical patterns to avoid, and the polish-pass checklist), see `STYLE.md`. The polish checklist in `STYLE.md` Section 7 is run before any content is presented to the user.
 
 ## 9. Initial state
 
