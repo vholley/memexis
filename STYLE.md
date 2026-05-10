@@ -18,25 +18,25 @@ These patterns never appear in finished prose. The rule admits no exceptions.
 
 **Em-dashes (—).** Replace with a period, comma, parentheses, or colon depending on the sentence. If the sentence feels like it wants an em-dash, restructure it.
 
-*Bad.* "This is a design flaw — and a serious one."  
-*Good.* "This is a design flaw, and a serious one." / "This is a design flaw. A serious one."
+*Bad.* "The argument is flawed — and seriously so."  
+*Good.* "The argument is flawed, and seriously so." / "The argument is flawed. Seriously so."
 
 **Dramatic countdowns.** Don't negate two or more things to build to a point. State the point directly.
 
-*Bad.* "Not a bug. Not a feature. A design flaw."  
-*Good.* "A design flaw."
+*Bad.* "Not luck. Not coincidence. A pattern."  
+*Good.* "A pattern."
 
 **Self-posed rhetorical questions.** Don't pose a question and immediately answer it.
 
-*Bad.* "Why does this matter? Because the data shifts every quarter."  
+*Bad.* "Why does this matter? Because the conclusion changes when the assumption changes."  
 *Bad.* "The result? Catastrophic."  
-*Good.* "This matters because the data shifts every quarter."  
+*Good.* "This matters because the conclusion changes when the assumption changes."  
 *Good.* "The result is catastrophic."
 
 **Pompous copulas.** Don't replace "is" with "serves as", "stands as", "marks", or "represents" to add weight. Repetition of "is" is preferable.
 
-*Bad.* "This serves as a turning point in the curriculum."  
-*Good.* "This is a turning point in the curriculum."
+*Bad.* "This serves as a turning point in the argument."  
+*Good.* "This is a turning point in the argument."
 
 ## 3. Filler-vs-information patterns
 
@@ -44,10 +44,10 @@ These patterns are common in LLM output and sometimes in human writing. They're 
 
 **Negative parallelism.** Don't negate a weaker claim to set up a stronger one when "not X" is just rhetorical setup. The "not X" half should carry information the reader needs; if it doesn't, drop it and state the strong claim directly.
 
-*Bad.* "This isn't a bug, it's a design flaw."  
-*Good.* "This is a design flaw."
+*Bad.* "This isn't a coincidence, it's a pattern."  
+*Good.* "This is a pattern."
 
-*When acceptable.* When both halves carry information. "uv pip is a compatibility shim, not the recommended interface for projects" passes: the reader learns both that it works (compatibility shim) and that it isn't the right default. The test: drop the negated half. Is the sentence weaker? If yes, keep the original. If no, the negation was filler.
+*When acceptable.* When both halves carry information. "A study note is a working document, not a polished reference" passes: the reader learns both that the page is in progress and that it isn't the canonical version (which is what they might assume from "note"). The test: drop the negated half. Is the sentence weaker? If yes, keep the original. If no, the negation was filler.
 
 **Triads with repeated possessives or words.** Three parallel clauses with identical openings ("its own X, its own Y, its own Z") read as rhetorical drumbeat. Either trim the repetition or break the triad into a single phrase with a shared opening.
 
@@ -58,29 +58,29 @@ These patterns are common in LLM output and sometimes in human writing. They're 
 
 **Colon-as-drama.** A colon followed by a punchy phrase often replaces a more direct sentence. The colon-as-label form ("The principle:" introducing the actual principle) is fine; the colon-as-drama form (a colon used to set up a punchline) is not.
 
-*Bad.* "uv.lock is comprehensive: every transitive dependency, every supported platform, every supported Python version."  
-*Good.* "uv.lock records every transitive dependency, across every supported platform and Python version."
+*Bad.* "The argument is comprehensive: every claim supported, every counter addressed, every assumption defended."  
+*Good.* "The argument supports every claim, addresses every counter, and defends every assumption."
 
 *When acceptable.* When the colon labels the content that follows ("The pattern:", "The rationale:") and the content is substantive. Not when the colon sets up a one-line punchline.
 
-**List-rhythm where prose would flow better.** Three or more short clauses in a row with the same shape ("X is typed; Y is typed; Z is typed") read as recitation. Combine into a single prose sentence.
+**List-rhythm where prose would flow better.** Three or more short clauses in a row with the same shape ("X is sourced; Y is sourced; Z is sourced") read as recitation. Combine into a single prose sentence.
 
-*Bad.* "Structured outputs are typed; tool schemas are typed; agent state machines are typed."  
-*Good.* "Structured outputs are typed, as are tool schemas and agent state machines."
+*Bad.* "The introduction is sourced; the body is sourced; the conclusion is sourced."  
+*Good.* "The introduction, body, and conclusion are all sourced."
 
-*When acceptable.* When the parallelism captures a structural point the reader needs to see preserved (parallel API methods, parallel CLI commands). Less acceptable in expository prose.
+*When acceptable.* When the parallelism captures a structural point the reader needs to see preserved (e.g. parallel cases in a definition, parallel steps in a procedure). Less acceptable in expository prose.
 
 **Surface-pattern openers.** Several sentence openers introduce dramatic weight without earning it. State the substance directly.
 
 The flagged openers: "Not just...", "It's not that...", "What's interesting is...", "What's striking is...", "Here's the thing...", "The key insight is...", "It turns out that...", "It's worth noting that...", "The truth is...", "The reality is...", "What's more...".
 
-*Bad.* "What's interesting is that uv handles Python interpreter management."  
-*Good.* "uv handles Python interpreter management."
+*Bad.* "What's interesting is that the policy was reversed within six months."  
+*Good.* "The policy was reversed within six months."
 
 **Concept-elevating phrases.** Avoid "fundamentally reshaping", "redefining", "transforming", "the new paradigm of", "a turning point in", and similar phrases used to inflate stakes. Most claims of transformation are smaller than the language suggests.
 
-*Bad.* "ruff is fundamentally reshaping the Python tooling landscape."  
-*Good.* "ruff replaces flake8, isort, and several other tools."
+*Bad.* "This finding is fundamentally reshaping the field."  
+*Good.* "This finding contradicts the dominant model of the past two decades."
 
 *When acceptable.* When the change really is at that scale and the claim is concrete. Rarely.
 
@@ -100,7 +100,7 @@ These words have legitimate technical meanings. Allowed in those contexts; avoid
 
 - **leverage**: allowed for financial leverage, leveraged buyout. Avoided as a substitute for "use".
 - **robust**: allowed for robust regression, robust to noise, robust statistics. Avoided as filler intensifier.
-- **framework**: allowed for named software frameworks (Django, Express), regulatory frameworks. Avoided as filler ("a framework for thinking about X" usually wants "an approach to" or "a way of").
+- **framework**: allowed for named frameworks (e.g. Django, ISO 9001, the Standard Model). Avoided as filler ("a framework for thinking about X" usually wants "an approach to" or "a way of").
 - **streamline**: allowed when describing actual workflow consolidation. Avoided as filler.
 
 ### Grandiose nouns
@@ -109,20 +109,20 @@ These read as filler when used metaphorically.
 
 **tapestry**, **landscape** (when metaphorical), **paradigm**, **ecosystem** (when metaphorical), **load-bearing** (when metaphorical).
 
-*Bad.* "The Python tooling landscape is shifting."  
-*Good.* "Python tooling is shifting."
+*Bad.* "The healthcare landscape is shifting."  
+*Good.* "Healthcare delivery is shifting."
 
-*Bad.* "Types do load-bearing work in this codebase."  
-*Good.* "Types are central to the design."
+*Bad.* "Citations do load-bearing work in academic writing."  
+*Good.* "Citations are central to academic writing."
 
-*When acceptable.* "ecosystem" is fine in the literal biological sense and in common phrases ("the npm ecosystem"); in more sweeping uses ("a transformative ecosystem of agentic AI") it's filler. "landscape" is fine when describing actual geography.
+*When acceptable.* "ecosystem" is fine in the literal biological sense and in common phrases ("the open-source ecosystem", "the academic publishing ecosystem"); in more sweeping uses ("a transformative ecosystem of agentic AI") it's filler. "landscape" is fine when describing actual geography.
 
 ### Intensifier adverbs as filler
 
 **deeply, genuinely, fundamentally, remarkably, meaningfully, arguably, quietly** are normal in natural prose and add value when they convey specific meaning. They're filler when added as weight to a claim that doesn't need them.
 
 *Filler.* "This is deeply important." / "Genuinely innovative approach." / "Fundamentally reshaping the industry."  
-*Precise.* "Deeply rooted in tradition." / "Genuinely obscure." / "Fundamentally different at the data layer."
+*Precise.* "Deeply rooted in tradition." / "Genuinely obscure." / "Fundamentally different in their underlying assumptions."
 
 The test: drop the adverb. Does the sentence change in meaning, or just lose weight? If it just loses weight, the adverb was filler.
 
@@ -130,9 +130,9 @@ The test: drop the adverb. Does the sentence change in meaning, or just lose wei
 
 Don't write "experts argue", "observers note", "industry reports suggest" without naming the source. Either name the source or state the claim directly and own it.
 
-*Bad.* "Experts argue that uv will replace pip in the long run."  
-*Good.* "Astral's stated goal is for uv to replace pip in the long run."  
-*Good.* "uv may replace pip in the long run."
+*Bad.* "Researchers argue that early intervention improves outcomes."  
+*Good.* "Smith et al. (2023) found early intervention improved outcomes for the trial cohort."  
+*Good.* "Early intervention may improve outcomes."
 
 ### Invented concept labels
 
@@ -150,68 +150,68 @@ These patterns appear in LLM output and not often in natural prose. They're addi
 
 **Adjective stacking.** Three or more adjectives in a row, often with comma separators. Common in marketing prose.
 
-*Bad.* "ruff is a robust, scalable, production-ready Python linter."  
-*Good.* "ruff is a Python linter."
+*Bad.* "She proposed a robust, scalable, innovative approach."  
+*Good.* "She proposed splitting the contract into three phases."
 
 The test: do the adjectives carry independent information, or are they piled up for impressiveness? If the latter, pick one or none.
 
 **Comprehensive-list tic.** Phrases like "...and many more", "...and the list goes on", "...among others" used to suggest depth without providing it.
 
-*Bad.* "Python supports type hints, generics, protocols, ParamSpec, and many more."  
-*Good.* "Python supports type hints, generics, protocols, and ParamSpec." (And stop there if that's the list; or extend it if there's more to say.)
+*Bad.* "The library covers calculus, linear algebra, statistics, and many more."  
+*Good.* "The library covers calculus, linear algebra, and statistics." (And stop there if that's the list; or extend it if there's more to say.)
 
-*When acceptable.* In rare cases where listing every item is genuinely impractical and the point is that the list is long. State why instead of using filler. "Pytest has hundreds of plugins" is fine; "pytest-cov, pytest-mock, and many more" is filler.
+*When acceptable.* In rare cases where listing every item is genuinely impractical and the point is that the list is long. State why instead of using filler. "The journal has published thousands of papers on the topic" is fine; "Smith 1991, Jones 1994, Patel 1996, and many more" is filler.
 
 **Generic bridging phrases.** "That said,", "At the end of the day,", "When all is said and done,", "All things considered,". These are placeholders for transitions that should carry actual content.
 
-*Bad.* "That said, ruff has its limitations."  
-*Good.* "ruff doesn't replace mypy or full type inference."
+*Bad.* "That said, the strategy has flaws."  
+*Good.* "The strategy assumes constant demand, which the empirical data contradicts."
 
 The test: what does the bridging phrase contribute? If it's "I'm changing topic" or "I'm summarizing", say that more specifically.
 
 **Restating openers.** "In essence,", "In short,", "Put simply,", "To put it plainly,", "Basically,". These often introduce a restatement of something just said. The original or the restatement is redundant; pick one.
 
-*Bad.* "ruff is a Python linter that runs many checks. In essence, it's a static analyzer."  
-*Good.* "ruff is a static analyzer for Python." (Or whichever framing was the right one.)
+*Bad.* "The argument involves many premises and a careful chain of inference. In essence, it's a logical proof."  
+*Good.* "The argument is a logical proof." (Or whichever framing was the right one.)
 
 *When acceptable.* When introducing a brief summary of a long passage. Not when paraphrasing a single preceding sentence.
 
-**Audience-flattering openers.** "As any seasoned developer knows,", "As you might expect,", "Anyone who's worked with X will tell you,". These flatter the reader and add nothing.
+**Audience-flattering openers.** "As any seasoned X knows,", "As you might expect,", "Anyone who's worked with X will tell you,". These flatter the reader and add nothing.
 
-*Bad.* "As any senior engineer knows, premature optimization is a problem."  
-*Good.* "Premature optimization is a problem."
+*Bad.* "As any seasoned researcher knows, sample size matters."  
+*Good.* "Sample size matters."
 
-**Universalism framing.** "Whether you're a beginner or an expert,", "Whether you're building X or Y,". These pretend to address every reader simultaneously. Pick a real audience and write for them.
+**Universalism framing.** "Whether you're a beginner or an expert,", "Whether you're doing X or Y,". These pretend to address every reader simultaneously. Pick a real audience and write for them.
 
-*Bad.* "Whether you're maintaining a legacy codebase or starting fresh, ruff fits."  
-*Good.* "ruff fits new projects and migrations alike."
+*Bad.* "Whether you're researching a paper or organizing a project, structured notes help."  
+*Good.* "Structured notes help research and project work alike."
 
 **Passive academic-sounding evaluation.** "X has been shown to...", "It has been argued that...", "It is widely acknowledged that...". These hide claims behind passive voice. Either name the source or own the claim.
 
-*Bad.* "It has been argued that uv will replace pip."  
-*Good.* "Astral's position is that uv replaces pip; the broader community has not consolidated."
+*Bad.* "It has been argued that the new method is faster."  
+*Good.* "Researchers at MIT reported a 30% speedup; the result has not been independently replicated."
 
-**Comparative scaffolding without specifics.** "Faster than ever", "more powerful than ever", "the best yet". These claim improvement without saying what improved.
+**Comparative scaffolding without specifics.** "Faster than ever", "more accurate than ever", "the best yet". These claim improvement without saying what improved.
 
-*Bad.* "uv is faster than ever."  
-*Good.* "uv 0.5 cut cold install time by 30% relative to 0.4."
+*Bad.* "The model is more accurate than ever."  
+*Good.* "The model achieves 94% accuracy on the benchmark, up from 87% the previous year."
 
 *When acceptable.* In casual contexts where the imprecision is fine. In technical writing, replace with the specific.
 
-**Faux-conversational interjections.** "And here's the kicker:", "But wait, there's more.", "Plot twist:". These import a casual-blog register into technical prose where it doesn't belong.
+**Faux-conversational interjections.** "And here's the kicker:", "But wait, there's more.", "Plot twist:". These import a casual-blog register into prose where it doesn't belong.
 
-*Bad.* "And here's the kicker: uv also handles Python versions."  
-*Good.* "uv also handles Python versions."
+*Bad.* "And here's the kicker: the experiment worked the first time."  
+*Good.* "The experiment worked the first time."
 
 **Topic-of-sentence padding.** "When it comes to X,", "In terms of Y,", "Speaking of Z,". These add words without adding meaning.
 
-*Bad.* "When it comes to performance, uv is fast."  
-*Good.* "uv is fast."
+*Bad.* "When it comes to citations, the article is well-sourced."  
+*Good.* "The article is well-sourced."
 
 **Process narration in finished prose.** "Let me unpack this", "Let me walk you through", "Let's dive in". These narrate the writing rather than carrying it.
 
-*Bad.* "Let me walk you through how ruff handles imports."  
-*Good.* "ruff sorts imports using the rules in the `I` family."
+*Bad.* "Let me walk you through how this argument fits together."  
+*Good.* "The argument rests on three premises and one inference rule, in this order: ..."
 
 ## 6. Structural rules
 
@@ -221,7 +221,7 @@ These apply at the document level rather than the sentence level.
 
 The test: if you removed a sentence, would the reader have lost information? If multiple sentences carry the same information, keep the strongest one and drop the rest.
 
-**Specific over abstract.** Name the thing rather than reaching for a generic noun. "Python's tooling stack" is more specific than "the Python ecosystem". "The dependency resolver" is more specific than "the framework".
+**Specific over abstract.** Name the thing rather than reaching for a generic noun. "The course's first module" is more specific than "the curriculum". "The Smith 2023 paper" is more specific than "the literature".
 
 When you find yourself writing "ecosystem", "framework", "approach", "system", or "landscape", check whether you can name the actual thing.
 
@@ -233,7 +233,7 @@ A reasonable test: read the would-be list as a single prose sentence ("X, Y, and
 
 **Headers used sparingly.** Use headers when a section is long enough that a reader will want to navigate to it. Don't use headers to break up short prose. Two-paragraph "sections" with their own header read as fragments.
 
-**Dates and version numbers in sources, not body text.** "Modern Python supports X" in body text; "PEP 695, Python 3.12+" in sources. Inline dates ("as of April 2026", "in 2026") date the page in a way that requires future maintenance.
+**Dates and version numbers in sources, not body text.** "Modern operating systems support virtual memory" in body text; "Linux 2.4+, Windows NT 4+" in sources. Inline dates ("as of April 2026", "in 2026") date the page in a way that requires future maintenance.
 
 **Sentence case in headings.** "Type checking in Python", not "Type Checking in Python".
 
