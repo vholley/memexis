@@ -79,6 +79,16 @@ The test: do the parallel clauses share their subject's relationship to the broa
 
 *When acceptable.* When the parallelism captures a structural point the reader needs to see preserved (e.g. parallel cases in a definition, parallel steps in a procedure). Less acceptable in expository prose.
 
+**Tagline summaries.** Don't summarize a topic in marketing cadence. Two related sub-patterns, often co-occurring:
+
+- **Tagline preamble.** "The one-line summary:", "In a sentence:", "TL;DR:", "Quick take:" used to introduce a one-line summary at the head of a note or section. Open with the substance; the reader doesn't need a labeled preamble before the explanation begins. Notes are not pitches.
+- **Fragment-list expansion.** A sentence made of comma-separated noun phrases without verbs ("Robust methodology, large sample, control group, pre-registered, replicated"). The cadence reads as a sales bullet list dressed up as prose. Convert to full prose clauses with verbs, or extract into a real bulleted list if the content is genuinely list-shaped.
+
+*Bad.* "The one-line summary: this is the study that settled the debate. Robust methodology, large sample, control group, pre-registered, replicated."  
+*Good.* "This study settled the debate. The methodology is robust, the sample is large, a control group is in place, the analysis was pre-registered, and the result has been replicated."
+
+The test for the fragment-list half: read the sentence aloud and ask whether it stands as a sentence on its own. A noun-phrase list joined by commas is not a sentence; it's a list pretending to be one.
+
 **Surface-pattern openers.** Several sentence openers introduce dramatic weight without earning it. State the substance directly.
 
 The flagged openers: "Not just...", "It's not that...", "What's interesting is...", "What's striking is...", "Here's the thing...", "The key insight is...", "It turns out that...", "It's worth noting that...", "The truth is...", "The reality is...", "What's more...".
@@ -298,7 +308,7 @@ Run this pass on every page before presenting it. Read the draft once with the c
 
 1. **Strict-rule scan.** Search for em-dashes ("—"). Look for dramatic countdowns, self-posed rhetorical questions, and pompous copulas. (Section 2.) These should be zero hits.
 
-2. **Filler-vs-information judgment.** Look for negative parallelism, triads with repeated openers, forced parallel structure across mismatched items, colon-as-drama, list-rhythm prose, and surface-pattern openers. For each instance, apply the "drop the bad half / drop the rhetoric and is anything lost" test. (Section 3.)
+2. **Filler-vs-information judgment.** Look for negative parallelism, triads with repeated openers, forced parallel structure across mismatched items, colon-as-drama, list-rhythm prose, tagline summaries ("The one-line summary:" preambles and fragment-list expansions), and surface-pattern openers. For each instance, apply the "drop the bad half / drop the rhetoric and is anything lost" test. (Section 3.)
 
 3. **Vocabulary scan.** Look for delve, utilize, harness (banned). Check leverage, robust, framework, streamline for filler use. Check grandiose nouns (ecosystem, landscape, paradigm, load-bearing, tapestry) for metaphorical use. Check intensifier adverbs (deeply, genuinely, fundamentally, remarkably) for filler use. Check epistemic hedges (may, might, could, perhaps, possibly, typically, generally, often, usually) and editorializing modifiers (interestingly, notably, importantly, crucially, of course). Check for vague attribution. (Section 4.)
 
