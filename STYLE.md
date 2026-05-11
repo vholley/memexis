@@ -56,6 +56,13 @@ These patterns are common in LLM output and sometimes in human writing. They're 
 
 *When acceptable.* When the repetition is doing real work, a deliberate emphasis you can defend. Most of the time you can't.
 
+**Forced parallel structure.** A sentence with X, Y, Z parallel form where the items don't share a category. The grammatical shape ("A is M, B is N, and C did P") signals "here are three related points," and the reader notices when the points aren't related.
+
+*Bad.* "The course is called Statistics, the syllabus calls it Statistics, and Smith teaches it."  
+*Good.* "Smith teaches the course, called Statistics."
+
+The test: do the parallel clauses share their subject's relationship to the broader topic, or any other unifying frame? If not, the parallel is decorative. Related to triads (above) but broader: triads catch the repetition pattern; this catches the category mismatch that the grammatical shape papers over.
+
 **Colon-as-drama.** A colon followed by a punchy phrase often replaces a more direct sentence. The colon-as-label form ("The principle:" introducing the actual principle) is fine; the colon-as-drama form (a colon used to set up a punchline) is not.
 
 *Bad.* "The argument is comprehensive: every claim supported, every counter addressed, every assumption defended."  
@@ -213,6 +220,16 @@ The test: what does the bridging phrase contribute? If it's "I'm changing topic"
 *Bad.* "Let me walk you through how this argument fits together."  
 *Good.* "The argument rests on three premises and one inference rule, in this order: ..."
 
+**Hedging where a specific condition would carry information.** "Somehow", "if you happen to", "unless you have a specific reason to do otherwise", "in certain cases". These are placeholders for the actual scenario or condition the reader needs to know.
+
+*Bad.* "If you somehow encounter both editions, cite the newer one."  
+*Good.* "If a library has both the 1992 first edition and the 2018 revision, cite the 2018 revision; the author changed key claims in chapter 4."
+
+*Bad.* "Use the standard citation format unless you have a specific reason to do otherwise."  
+*Good.* "Use the standard citation format. The documented exceptions are archival sources without page numbers and personal communications."
+
+The test: can the reader act on the advice without knowing what the placeholder hides? If not, name the condition.
+
 ## 6. Structural rules
 
 These apply at the document level rather than the sentence level.
@@ -231,6 +248,20 @@ A reasonable test: read the would-be list as a single prose sentence ("X, Y, and
 
 **Bold and italics for genuine emphasis.** Reserve bold for terms-being-defined and for genuinely critical claims. Reserve italics for titles, foreign terms, and emphasis where it matters. Don't use either for visual texture.
 
+**No bolded-lead atomic-fact stack.** Don't use a sequence of bolded opening sentences (each starting a short paragraph) to make a section feel organized when the underlying content is miscellaneous. The format promises "scannable independent facts" and the reader notices when the content is a loose endnote rather than reference cards.
+
+*Bad.*
+
+> **The journal has a paywall.** Most articles require a subscription.
+>
+> **Citations follow APA style.** Author-date format with a reference list at the end.
+>
+> **The journal's editor is K. Nguyen.** She has held the position since 2019.
+
+*Good.* Either group the items into real subsections with headers, integrate them into prose with their natural connections, or accept that the section is a loose endnote and drop the structural pretense.
+
+The test: strip the bold off and read the section as prose. If it holds together, the bold was earned. If it reads as miscellany, the bold was carrying the structure rather than the content.
+
 **Headers used sparingly.** Use headers when a section is long enough that a reader will want to navigate to it. Don't use headers to break up short prose. Two-paragraph "sections" with their own header read as fragments.
 
 **Dates and version numbers in sources, not body text.** "Modern operating systems support virtual memory" in body text; "Linux 2.4+, Windows NT 4+" in sources. Inline dates ("as of April 2026", "in 2026") date the page in a way that requires future maintenance.
@@ -243,13 +274,13 @@ Run this pass on every page before presenting it. Read the draft once with the c
 
 1. **Strict-rule scan.** Search for em-dashes ("—"). Look for dramatic countdowns, self-posed rhetorical questions, and pompous copulas. (Section 2.) These should be zero hits.
 
-2. **Filler-vs-information judgment.** Look for negative parallelism, triads with repeated openers, colon-as-drama, list-rhythm prose, and surface-pattern openers. For each instance, apply the "drop the bad half / drop the rhetoric and is anything lost" test. (Section 3.)
+2. **Filler-vs-information judgment.** Look for negative parallelism, triads with repeated openers, forced parallel structure across mismatched items, colon-as-drama, list-rhythm prose, and surface-pattern openers. For each instance, apply the "drop the bad half / drop the rhetoric and is anything lost" test. (Section 3.)
 
 3. **Vocabulary scan.** Look for delve, utilize, harness (banned). Check leverage, robust, framework, streamline for filler use. Check grandiose nouns (ecosystem, landscape, paradigm, load-bearing, tapestry) for metaphorical use. Check intensifier adverbs (deeply, genuinely, fundamentally, remarkably) for filler use. Check for vague attribution. (Section 4.)
 
-4. **LLM-tell scan.** Adjective stacks. "And many more". Generic bridging. Restating openers. Audience flattery. Universalism. Passive evaluation. Comparative scaffolding. Faux-conversational interjections. Topic-of-sentence padding. Process narration. (Section 5.)
+4. **LLM-tell scan.** Adjective stacks. "And many more". Generic bridging. Restating openers. Audience flattery. Universalism. Passive evaluation. Comparative scaffolding. Faux-conversational interjections. Topic-of-sentence padding. Process narration. Hedging where a condition would carry information. (Section 5.)
 
-5. **Structural pass.** Each point made once. Specific nouns where possible. Lists only where genuinely list-shaped. Bold and italics earned. Headers earning their place. Dates and version numbers in sources. Sentence case headings. (Section 6.)
+5. **Structural pass.** Each point made once. Specific nouns where possible. Lists only where genuinely list-shaped. Bold and italics earned. No bolded-lead atomic-fact stacks (strip the bold and check coherence). Headers earning their place. Dates and version numbers in sources. Sentence case headings. (Section 6.)
 
 The first pass through often catches several issues. A second pass catches what the first missed; a third typically catches one or two more. Three passes is enough.
 
