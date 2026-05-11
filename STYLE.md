@@ -89,6 +89,21 @@ The test: do the parallel clauses share their subject's relationship to the broa
 
 The test for the fragment-list half: read the sentence aloud and ask whether it stands as a sentence on its own. A noun-phrase list joined by commas is not a sentence; it's a list pretending to be one.
 
+**Multicolon cadence.** Three-beat structures used regardless of whether the content has three parts. "Faster, cheaper, better." "Strategy, execution, outcomes." The cadence borrows the rhetorical force of the rule-of-three; the content rarely earns it. If the topic has three genuine parts, list them; otherwise drop the cadence and state the substance. Related to but distinct from Tagline summaries above: Tagline summaries catches the marketing-summary form (a labeled tagline plus a fragment list); Multicolon cadence catches the three-beat rhythm even outside that form.
+
+*Bad.* "The new method is faster, cheaper, better."  
+*Good.* "The new method reduces compute cost by 40% and runs in roughly half the wall-clock time, with the same accuracy on the held-out set."
+
+**Crescendo construction.** Sentences ordered short-to-long for sonic effect, often with a "but" or "and" pivot near the end that promises a payoff. The shape draws attention to the rhythm rather than the content. Order sentences by logical sequence, not by length.
+
+*Bad.* "The model is trained. It is trained on a large dataset. It is trained on a large, diverse dataset. But it still fails on out-of-distribution inputs."  
+*Good.* "The model is trained on a large and diverse dataset, but it still fails on out-of-distribution inputs."
+
+**Foreshadowed payoff phrases.** "And that changes everything.", "Here's where it gets interesting.", "But there's a catch." These flag a coming insight before delivering it and usually overpromise. State the insight directly; if the surrounding prose doesn't already mark it as significant, the foreshadow won't fix it.
+
+*Bad.* "But here's where it gets interesting: the result held across both groups."  
+*Good.* "The result held across both groups."
+
 **Surface-pattern openers.** Several sentence openers introduce dramatic weight without earning it. State the substance directly.
 
 The flagged openers: "Not just...", "It's not that...", "What's interesting is...", "What's striking is...", "Here's the thing...", "The key insight is...", "It turns out that...", "It's worth noting that...", "The truth is...", "The reality is...", "What's more...".
@@ -96,7 +111,7 @@ The flagged openers: "Not just...", "It's not that...", "What's interesting is..
 *Bad.* "What's interesting is that the policy was reversed within six months."  
 *Good.* "The policy was reversed within six months."
 
-**Concept-elevating phrases.** Avoid "fundamentally reshaping", "redefining", "transforming", "the new paradigm of", "a turning point in", and similar phrases used to inflate stakes. Most claims of transformation are smaller than the language suggests.
+**Concept-elevating phrases.** Avoid "fundamentally reshaping", "redefining", "transforming", "the new paradigm of", "a turning point in", "the era of X", "the revolution in Y", "the new way to Z", and similar phrases used to inflate stakes. Bare nouns "era", "revolution", "the new way" carry the same overreach. Most claims of transformation are smaller than the language suggests.
 
 *Bad.* "This finding is fundamentally reshaping the field."  
 *Good.* "This finding contradicts the dominant model of the past two decades."
@@ -144,6 +159,31 @@ These read as filler when used metaphorically.
 *Precise.* "Deeply rooted in tradition." / "Genuinely obscure." / "Fundamentally different in their underlying assumptions."
 
 The test: drop the adverb. Does the sentence change in meaning, or just lose weight? If it just loses weight, the adverb was filler.
+
+### Aspirational verbs
+
+Verbs that imply important change without specifying what: "unlock", "empower", "elevate", "transform" (plus "harness", banned above). State the actual change rather than gesturing at it.
+
+*Bad.* "Causal inference unlocks reliable policy recommendations."  
+*Good.* "Causal inference yields effect estimates that hold under intervention, which is what reliable policy recommendations require."
+
+*When acceptable.* When the verb has a literal technical meaning the reader needs: "elevated permissions" in a security context, "transform" in a coordinate-transform or data-pipeline context. Borrowed-from-vendor framings (e.g. "tier unlocks" when a provider literally uses that term as a status name) are tolerable but worth restructuring when possible.
+
+### Concrete-sounding abstractions
+
+Compound noun phrases that borrow the texture of concrete nouns to refer to abstractions: "the unlock", "the lever", "the unfair advantage", "the moat". Use a real concrete noun or restructure the claim. Related to Invented concept labels below, which catches the broader pattern of coining compound terms; this entry catches the specific marketing-cadence variant.
+
+*Bad.* "The unlock for this team was pre-registration."  
+*Good.* "Pre-registration eliminated the analytical degrees of freedom that had previously made the team's results fragile under replication."
+
+### Engineered specificity
+
+Specific-sounding numbers or formulas chosen for memorability rather than accuracy: "10x", "the 80/20", "the one thing". State the actual number, distribution, or claim.
+
+*Bad.* "The new method is 10x more accurate than the baseline."  
+*Good.* "The new method reduces classification error from 12% to 3% on the held-out test set."
+
+*When acceptable.* When the number is a real measurement, not a memorability hook. "10x more accurate" is fine if 10x is the measured ratio; "10x" used as a tagline is not.
 
 ### Epistemic hedges
 
@@ -198,7 +238,7 @@ The test: do the adjectives carry independent information, or are they piled up 
 
 *When acceptable.* In rare cases where listing every item is genuinely impractical and the point is that the list is long. State why instead of using filler. "The journal has published thousands of papers on the topic" is fine; "Smith 1991, Jones 1994, Patel 1996, and many more" is filler.
 
-**Generic bridging phrases.** "That said,", "At the end of the day,", "When all is said and done,", "All things considered,". These are placeholders for transitions that should carry actual content.
+**Generic bridging phrases.** "That said,", "At the end of the day,", "When all is said and done,", "All things considered,", "What this really means is...", "At its core...", "When you strip it all away...". These are placeholders for transitions that should carry actual content; the bridge phrase pauses for emphasis without earning it.
 
 *Bad.* "That said, the strategy has flaws."  
 *Good.* "The strategy assumes constant demand, which the empirical data contradicts."
@@ -221,6 +261,11 @@ The test: what does the bridging phrase contribute? If it's "I'm changing topic"
 
 *Bad.* "For a senior practitioner, the implication is straightforward."  
 *Good.* "The implication is straightforward."
+
+**First-person collective intimacy.** "We all know...", "We've all been there...", "The truth nobody talks about." Manufactures in-group cohesion without delivering the implied insight. Drop the collective frame and state the claim. (The "nobody talks about" half overlaps with Section 4 False exclusivity framings.)
+
+*Bad.* "We've all run analyses that depended on a forking path."  
+*Good.* "Analyses that depend on forking paths are common and produce results that fail to replicate."
 
 **Universalism framing.** "Whether you're a beginner or an expert,", "Whether you're doing X or Y,". These pretend to address every reader simultaneously. Pick a real audience and write for them.
 
@@ -268,9 +313,14 @@ The test: can the reader act on the advice without knowing what the placeholder 
 
 These apply at the document level rather than the sentence level.
 
-**Each point made once.** Don't restate the thesis in different words across the document. State it once at the beginning, develop it, conclude. The "fractal restatement" pattern (the same point in the intro, in each section's opening, and in the conclusion) is filler.
+**Each point made once.** Don't restate the thesis in different words across the document. State it once at the beginning, develop it, conclude. The "fractal restatement" pattern (the same point in the intro, in each section's opening, and in the conclusion) is filler. Same failure mode at the paragraph level: "thesis restated in three voices" (setting it up, stating it, then reinforcing it, all in one paragraph) feels emphatic but is padding.
 
 The test: if you removed a sentence, would the reader have lost information? If multiple sentences carry the same information, keep the strongest one and drop the rest.
+
+**Closing-line lift.** Paragraphs or sentences ending on a deliberately weighted final clause, often set off on its own line, meant to feel like a takeaway. Drop the weighted closer. If the paragraph's actual content is the takeaway, the lift adds nothing; if it isn't, the lift overstates. Often co-occurs with Foreshadowed payoff phrases (Section 3) in the same paragraph.
+
+*Bad.* "Pre-registration eliminated the analytical degrees of freedom that previously made replication fragile. And that changes how analyses are designed."  
+*Good.* "Pre-registration eliminated the analytical degrees of freedom that previously made replication fragile."
 
 **Specific over abstract.** Name the thing rather than reaching for a generic noun. "The course's first module" is more specific than "the curriculum". "The Smith 2023 paper" is more specific than "the literature".
 
@@ -308,13 +358,13 @@ Run this pass on every page before presenting it. Read the draft once with the c
 
 1. **Strict-rule scan.** Search for em-dashes ("—"). Look for dramatic countdowns, self-posed rhetorical questions, and pompous copulas. (Section 2.) These should be zero hits.
 
-2. **Filler-vs-information judgment.** Look for negative parallelism, triads with repeated openers, forced parallel structure across mismatched items, colon-as-drama, list-rhythm prose, tagline summaries ("The one-line summary:" preambles and fragment-list expansions), and surface-pattern openers. For each instance, apply the "drop the bad half / drop the rhetoric and is anything lost" test. (Section 3.)
+2. **Filler-vs-information judgment.** Look for negative parallelism, triads with repeated openers, forced parallel structure across mismatched items, colon-as-drama, list-rhythm prose, tagline summaries ("The one-line summary:" preambles and fragment-list expansions), multicolon cadence (three-beat lists), crescendo construction, foreshadowed payoff phrases, surface-pattern openers, and concept-elevating phrases (including bare "era", "revolution", "the new way"). For each instance, apply the "drop the bad half / drop the rhetoric and is anything lost" test. (Section 3.)
 
-3. **Vocabulary scan.** Look for delve, utilize, harness (banned). Check leverage, robust, framework, streamline for filler use. Check grandiose nouns (ecosystem, landscape, paradigm, load-bearing, tapestry) for metaphorical use. Check intensifier adverbs (deeply, genuinely, fundamentally, remarkably) for filler use. Check epistemic hedges (may, might, could, perhaps, possibly, typically, generally, often, usually) and editorializing modifiers (interestingly, notably, importantly, crucially, of course). Check for vague attribution. (Section 4.)
+3. **Vocabulary scan.** Look for delve, utilize, harness (banned). Check leverage, robust, framework, streamline for filler use. Check grandiose nouns (ecosystem, landscape, paradigm, load-bearing, tapestry) for metaphorical use. Check intensifier adverbs (deeply, genuinely, fundamentally, remarkably) for filler use. Check epistemic hedges (may, might, could, perhaps, possibly, typically, generally, often, usually) and editorializing modifiers (interestingly, notably, importantly, crucially, of course). Check aspirational verbs (unlock, empower, elevate, transform), concrete-sounding abstractions (the unlock, the lever, the moat, the unfair advantage), and engineered specificity (10x, 80/20, the one thing). Check for vague attribution. (Section 4.)
 
-4. **LLM-tell scan.** Adjective stacks. "And many more". Generic bridging. Restating openers. Audience flattery. Reader-experience framings ("For a senior practitioner..."). Universalism. Passive evaluation. Comparative scaffolding. Faux-conversational interjections. Topic-of-sentence padding. Process narration. Hedging where a condition would carry information. (Section 5.)
+4. **LLM-tell scan.** Adjective stacks. "And many more". Generic bridging (including "What this really means is...", "At its core..."). Restating openers. Audience flattery. Reader-experience framings ("For a senior practitioner..."). First-person collective intimacy ("We all know...", "We've all been there..."). Universalism. Passive evaluation. Comparative scaffolding. Faux-conversational interjections. Topic-of-sentence padding. Process narration. Hedging where a condition would carry information. (Section 5.)
 
-5. **Structural pass.** Each point made once. Specific nouns where possible. Lists only where genuinely list-shaped. Bold and italics earned. No bolded-lead atomic-fact stacks (strip the bold and check coherence). Headers earning their place. Dates and version numbers in sources. Sentence case headings. (Section 6.)
+5. **Structural pass.** Each point made once (including no "thesis restated in three voices" at paragraph level). Specific nouns where possible. Lists only where genuinely list-shaped. Bold and italics earned. No bolded-lead atomic-fact stacks (strip the bold and check coherence). No closing-line lift on paragraphs. Headers earning their place. Dates and version numbers in sources. Sentence case headings. (Section 6.)
 
 The first pass through often catches several issues. A second pass catches what the first missed; a third typically catches one or two more. Three passes is enough.
 
