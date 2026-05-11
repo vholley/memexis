@@ -11,6 +11,15 @@ Three top-level containers, plus an archive:
 - `resources/` — cross-cutting reference articles (patterns, techniques, lessons that generalize).
 - `archive/` — completed projects and superseded material.
 
+## Setup
+
+This repo is a template. To start your own Memexis:
+
+1. Fork it or use it as a GitHub template to create your own copy.
+2. Configure Claude to read and write your copy: follow [`docs/setup-claude-mcp-github.md`](docs/setup-claude-mcp-github.md) to set up the GitHub MCP server in Claude Desktop or Claude Code.
+
+More setup docs (Claude Code install, optional integrations) will live in `docs/` as they're added.
+
 ## How to use
 
 Most work happens through an LLM agent. Two interaction modes:
