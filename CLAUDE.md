@@ -159,7 +159,7 @@ When working on a module:
 
 ### Study note shape
 
-Study notes default to reference depth. The reader is a senior practitioner who returns to the note later when applying the topic; survey-level coverage is the wrong target. Each study note follows this shape:
+Study notes default to reference depth. The agent calibrates breadth and depth for a reader knowledgeable in the topic but not necessarily an expert. Skip trivial aspects of the topic (e.g., a note about Bayesian inference does not need to define what probability is). Err toward depth. The note itself does not address the reader's experience level; see STYLE.md for the in-prose framing rules. Survey-level coverage is the wrong target. Each study note follows this shape:
 
 1. **What it is**: concrete description of the topic.
 2. **Why it matters**: practical justification, with the failure modes the topic addresses.
@@ -393,7 +393,7 @@ Content the agent writes follows these structural rules:
 - **Citations**: every non-trivial claim cites a source. Use ``-style inline references where applicable, or footnote-style citations linking to the source page in `sources/`.
 - **Sentence case** in headings.
 - **Working-out and exercises** belong in `study/` or in module `exercises.md`, not in canonical pages.
-- **Reference depth, not survey depth**: study notes default to reference depth. The reader is a senior practitioner returning later when applying the topic.
+- **Reference depth, not survey depth**: study notes default to reference depth. The agent calibrates for a reader knowledgeable in the topic but not necessarily an expert; skip trivial aspects of the topic and err toward depth. The note itself does not address the reader's experience level (see STYLE.md).
 - **Version numbers and dates belong in sources**: body text says "modern Python supports X"; sources list says "PEP 695, Python 3.12+". Inline release dates and "as of April 2026" framings date the page in a way that requires future maintenance.
 - **License mentions are decision-relevant or omitted**: include licensing details when they affect a reader's choice (open-weight model selection, GDPR-sensitive deployments). Omit license mentions for common tools where the reader will not be making a license-driven decision.
 
