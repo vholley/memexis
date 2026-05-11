@@ -2,6 +2,8 @@
 
 The full prose style guide for content written in this wiki. CLAUDE.md §8 carries the structural rules and points here; this document carries the prose-level rules with examples and exceptions. The agent reads this during drafting and runs the checklist in Section 7 before presenting any content.
 
+The target voice is textbook-direct: declarative, present-tense, claims stated rather than approached. The reader is a senior practitioner who wants the answer, not the path to it. Set the frame, state the rule, give the example. The rules below operationalize that voice; they catch the patterns that make prose sound conversational, exploratory, or hedged when the content is settled.
+
 ## 1. How to use this document
 
 When drafting: keep Sections 2 and 4 in mind as constraints, since their patterns are mechanical and shouldn't appear at all. Don't pause mid-sentence to consult the rest; just write.
@@ -133,13 +135,30 @@ These read as filler when used metaphorically.
 
 The test: drop the adverb. Does the sentence change in meaning, or just lose weight? If it just loses weight, the adverb was filler.
 
+### Epistemic hedges
+
+Don't soften claims with "may", "might", "could", "perhaps", "possibly", "somewhat", "fairly", "relatively", "typically", "generally", "often", "usually". State the claim. When uncertainty actually matters, name the condition: "X holds when Y" beats "X may hold".
+
+*Bad.* "Early intervention may improve outcomes."  
+*Good.* "Early intervention improves outcomes." (Or, with a real qualifier: "Early intervention improves outcomes for the populations Smith et al. studied.")
+
+*Bad.* "The method is generally accurate."  
+*Good.* "The method is accurate." (Or, with a real measurement: "The method achieves 94% accuracy on the held-out set.")
+
+### Editorializing modifiers
+
+"Interestingly", "notably", "importantly", "crucially", "surprisingly", "remarkably", "of course" tell the reader what to think about a fact rather than letting the fact stand. Drop them. If the surrounding prose doesn't already convey that this is critical or surprising, the modifier won't fix it.
+
+*Bad.* "Importantly, the experiment controlled for prior exposure."  
+*Good.* "The experiment controlled for prior exposure."
+
 ### Vague attribution
 
 Don't write "experts argue", "observers note", "industry reports suggest" without naming the source. Either name the source or state the claim directly and own it.
 
 *Bad.* "Researchers argue that early intervention improves outcomes."  
 *Good.* "Smith et al. (2023) found early intervention improved outcomes for the trial cohort."  
-*Good.* "Early intervention may improve outcomes."
+*Good.* "Early intervention improves outcomes."
 
 ### Invented concept labels
 
@@ -276,7 +295,7 @@ Run this pass on every page before presenting it. Read the draft once with the c
 
 2. **Filler-vs-information judgment.** Look for negative parallelism, triads with repeated openers, forced parallel structure across mismatched items, colon-as-drama, list-rhythm prose, and surface-pattern openers. For each instance, apply the "drop the bad half / drop the rhetoric and is anything lost" test. (Section 3.)
 
-3. **Vocabulary scan.** Look for delve, utilize, harness (banned). Check leverage, robust, framework, streamline for filler use. Check grandiose nouns (ecosystem, landscape, paradigm, load-bearing, tapestry) for metaphorical use. Check intensifier adverbs (deeply, genuinely, fundamentally, remarkably) for filler use. Check for vague attribution. (Section 4.)
+3. **Vocabulary scan.** Look for delve, utilize, harness (banned). Check leverage, robust, framework, streamline for filler use. Check grandiose nouns (ecosystem, landscape, paradigm, load-bearing, tapestry) for metaphorical use. Check intensifier adverbs (deeply, genuinely, fundamentally, remarkably) for filler use. Check epistemic hedges (may, might, could, perhaps, possibly, typically, generally, often, usually) and editorializing modifiers (interestingly, notably, importantly, crucially, of course). Check for vague attribution. (Section 4.)
 
 4. **LLM-tell scan.** Adjective stacks. "And many more". Generic bridging. Restating openers. Audience flattery. Universalism. Passive evaluation. Comparative scaffolding. Faux-conversational interjections. Topic-of-sentence padding. Process narration. Hedging where a condition would carry information. (Section 5.)
 
