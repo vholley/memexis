@@ -2,7 +2,7 @@
 
 The full prose style guide for content written in this wiki. CLAUDE.md §8 carries the structural rules and points here; this document carries the prose-level rules with examples and exceptions. The agent reads this during drafting and runs the checklist in Section 7 before presenting any content.
 
-The target voice is textbook-direct: declarative, present-tense, claims stated rather than approached. The reader is a senior practitioner who wants the answer, not the path to it. Set the frame, state the rule, give the example. The rules below operationalize that voice; they catch the patterns that make prose sound conversational, exploratory, or hedged when the content is settled.
+The target voice is textbook-direct: declarative, present-tense, claims stated rather than approached. The reader wants the answer, not the path to it. Set the frame, state the rule, give the example. The rules below operationalize that voice; they catch the patterns that make prose sound conversational, exploratory, or hedged when the content is settled.
 
 ## 1. How to use this document
 
@@ -207,6 +207,11 @@ The test: what does the bridging phrase contribute? If it's "I'm changing topic"
 *Bad.* "As any seasoned researcher knows, sample size matters."  
 *Good.* "Sample size matters."
 
+**Reader-experience framings.** Don't frame content around the reader's experience level. "For a senior practitioner...", "For an experienced researcher...", "For those familiar with X...", "If you're new to X...", "Beginners might find..." make assumptions the note doesn't need and that don't hold across all future readers. The agent calibrates breadth and depth for the audience; the note itself doesn't address that calibration. The default reader is knowledgeable in the topic but not necessarily an expert.
+
+*Bad.* "For a senior practitioner, the implication is straightforward."  
+*Good.* "The implication is straightforward."
+
 **Universalism framing.** "Whether you're a beginner or an expert,", "Whether you're doing X or Y,". These pretend to address every reader simultaneously. Pick a real audience and write for them.
 
 *Bad.* "Whether you're researching a paper or organizing a project, structured notes help."  
@@ -297,7 +302,7 @@ Run this pass on every page before presenting it. Read the draft once with the c
 
 3. **Vocabulary scan.** Look for delve, utilize, harness (banned). Check leverage, robust, framework, streamline for filler use. Check grandiose nouns (ecosystem, landscape, paradigm, load-bearing, tapestry) for metaphorical use. Check intensifier adverbs (deeply, genuinely, fundamentally, remarkably) for filler use. Check epistemic hedges (may, might, could, perhaps, possibly, typically, generally, often, usually) and editorializing modifiers (interestingly, notably, importantly, crucially, of course). Check for vague attribution. (Section 4.)
 
-4. **LLM-tell scan.** Adjective stacks. "And many more". Generic bridging. Restating openers. Audience flattery. Universalism. Passive evaluation. Comparative scaffolding. Faux-conversational interjections. Topic-of-sentence padding. Process narration. Hedging where a condition would carry information. (Section 5.)
+4. **LLM-tell scan.** Adjective stacks. "And many more". Generic bridging. Restating openers. Audience flattery. Reader-experience framings ("For a senior practitioner..."). Universalism. Passive evaluation. Comparative scaffolding. Faux-conversational interjections. Topic-of-sentence padding. Process narration. Hedging where a condition would carry information. (Section 5.)
 
 5. **Structural pass.** Each point made once. Specific nouns where possible. Lists only where genuinely list-shaped. Bold and italics earned. No bolded-lead atomic-fact stacks (strip the bold and check coherence). Headers earning their place. Dates and version numbers in sources. Sentence case headings. (Section 6.)
 
